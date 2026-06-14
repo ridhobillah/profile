@@ -12,13 +12,18 @@ export default function App() {
       mirror: true,
     });
   }, []);
+
   return (
     <>
       <div className="relative min-h-screen w-full overflow-x-hidden bg-black">
+        {/* Background Glows */}
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-600/40 blur-[100px] sm:h-[700px] sm:w-[700px] md:h-[900px] md:w-[900px]"></div>
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-fuchsia-500/30 blur-[80px] sm:h-[350px] sm:w-[350px]"></div>
 
-        <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center px-4 pb-12 pt-6 sm:px-8 sm:pb-16 sm:pt-10 md:pt-12">
+        {/* Main Container */}
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center px-4 pt-8 pb-4 sm:px-8 sm:py-12 justify-start space-y-4 sm:space-y-8">
+          
+          {/* Header Title */}
           <div className="text-center">
             <h2
               data-aos="zoom-in"
@@ -34,36 +39,43 @@ export default function App() {
             </h1>
           </div>
 
-          <div className="relative mt-2 flex w-full flex-1 items-end justify-center sm:mt-4">
+          {/* Image & Badges Container */}
+          <div className="relative flex w-full max-w-md items-end justify-center sm:max-w-lg md:max-w-2xl">
+            
+            {/* UI/UX Designer - Didekatkan 2% masuk ke dalam */}
             <span
               data-aos="fade-right"
-              className="absolute left-[1%] top-[26%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:left-[8%] sm:top-[32%] sm:px-4 sm:py-2 sm:text-sm md:left-[14%] md:top-[36%]"
+              className="absolute left-[1%] top-[25%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:-left-[8%] sm:top-[32%] sm:px-4 sm:py-2 sm:text-sm md:-left-[16%] md:top-[36%]"
             >
               UI/UX Designer
             </span>
 
+            {/* Problem Solving - Didekatkan 2% masuk ke dalam */}
             <span
               data-aos="fade-left"
-              className="absolute right-[1%] top-[38%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:right-[6%] sm:top-[44%] sm:px-4 sm:py-2 sm:text-sm md:right-[12%] md:top-[46%]"
+              className="absolute right-[1%] top-[35%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:-right-[6%] sm:top-[44%] sm:px-4 sm:py-2 sm:text-sm md:-right-[14%] md:top-[46%]"
             >
               Problem Solving
             </span>
 
+            {/* Development - Didekatkan 2% masuk ke dalam */}
             <span
               data-aos="fade-right"
-              className="absolute left-[2%] top-[66%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:left-[10%] sm:px-4 sm:py-2 sm:text-sm md:left-[16%]"
+              className="absolute left-[2%] top-[65%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:-left-[6%] sm:top-[64%] sm:px-4 sm:py-2 sm:text-sm md:-left-[13%]"
             >
               Development
             </span>
 
+            {/* Team Work - Didekatkan 2% masuk ke dalam */}
             <span
               data-aos="fade-left"
-              className="absolute right-[2%] top-[62%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:right-[8%] sm:top-[62%] sm:px-4 sm:py-2 sm:text-sm md:right-[14%]"
+              className="absolute right-[2%] top-[72%] z-20 whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-medium text-white backdrop-blur-sm sm:-right-[8%] sm:top-[68%] sm:px-4 sm:py-2 sm:text-sm md:-right-[16%]"
             >
               Team Work
             </span>
 
-            <div className="relative h-[60vh] w-full max-w-md overflow-hidden sm:max-w-lg md:max-w-2xl">
+            {/* Profile Image Wrapper */}
+            <div className="relative h-[68vh] w-full overflow-hidden sm:h-[60vh]">
               <img
                 data-aos="zoom-in"
                 src={profile}
@@ -73,7 +85,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="relative z-20 mt-6 flex w-full justify-center px-2 sm:mt-8 sm:px-0">
+          {/* Action Buttons */}
+          <div className="relative z-20 w-full flex justify-center px-2 sm:px-0">
             <div className="flex w-full max-w-md flex-row">
               <a
                 href="https://wa.me/628989209979" target="_blank"
@@ -90,6 +103,7 @@ export default function App() {
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </>
